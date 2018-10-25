@@ -134,6 +134,7 @@ public class Parser {
             d.score += child.score;
         }
 
+        if(fn == null) return params;
         return fn.apply(params);
     }
 
