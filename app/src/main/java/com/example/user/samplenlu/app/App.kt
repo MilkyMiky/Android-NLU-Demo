@@ -2,7 +2,6 @@ package com.example.user.samplenlu.app
 
 import android.app.Application
 import com.example.user.samplenlu.di.appModule
-import com.example.user.samplenlu.di.coreModule
 import com.example.user.samplenlu.di.repositoryModule
 import org.koin.android.ext.android.startKoin
 

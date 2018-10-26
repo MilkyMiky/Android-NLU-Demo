@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.samplenlu">
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-
     <application
         android:name=".app.App"
         android:allowBackup="true"

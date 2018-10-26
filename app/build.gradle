@@ -41,7 +41,9 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
     implementation "org.koin:koin-android:$koin_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation project(':parser')
-//    implementation project(':core')
+
+    implementation "com.hannesdorfmann.mosby3:mvi:$mosby_version"
+
+    implementation project(':repository')
 }
 

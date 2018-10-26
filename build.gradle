@@ -6,6 +6,7 @@ buildscript {
         kotlin_version = '1.2.71'
         koin_version = '1.0.1'
         rxkotlin_version = '2.3.0'
+        mosby_version = '3.1.0'
     }
 
     repositories {
