@@ -1,4 +1,4 @@
-package com.example.user.samplenlu
+package com.example.user.samplenlu.ui.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,6 +14,8 @@ import coldash.easynlu.parse.Grammar
 import coldash.easynlu.parse.Parser
 import coldash.easynlu.parse.Rule
 import coldash.easynlu.parse.tokenizers.BasicTokenizer
+import com.example.user.samplenlu.R.id
+import com.example.user.samplenlu.R.layout
 
 class MainActivity : AppCompatActivity() {
 
@@ -66,15 +68,15 @@ class MainActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
+    setContentView(layout.activity_main)
 
     val grammar = Grammar(initRules(), "\$ROOT")
     val parser = Parser(grammar, BasicTokenizer(), emptyList())
 
-    val textView = findViewById<TextView>(R.id.tv)
-    val editText = findViewById<EditText>(R.id.edit_text)
-    val button = findViewById<Button>(R.id.button)
-    val buttonRecognize = findViewById<Button>(R.id.button_recognise)
+    val textView = findViewById<TextView>(id.tv)
+    val editText = findViewById<EditText>(id.edit_text)
+    val button = findViewById<Button>(id.button)
+    val buttonRecognize = findViewById<Button>(id.button_recognise)
     button.setOnClickListener {
       textView.text = parser.parse(editText.text.toString()).toString()
     }
