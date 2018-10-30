@@ -1,30 +1,19 @@
-package com.example.user.samplenlu
+package com.example.repository.service
 
-import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import coldash.easynlu.parse.Grammar
 import coldash.easynlu.parse.Parser
 import coldash.easynlu.parse.Rule
 import coldash.easynlu.parse.tokenizers.BasicTokenizer
+import com.example.core.service.NLUService
 
-class MainActivity : AppCompatActivity() {
+/**
+ * Created by Mikhail Lysyansky on 26.10.18.
+ */
+class NLUServiceImpl : NLUService {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
-
+  init {
     val grammar = Grammar(initRules(), "\$ROOT")
     val parser = Parser(grammar, BasicTokenizer(), emptyList())
-
-    val textView = findViewById<TextView>(R.id.tv)
-    val editText = findViewById<EditText>(R.id.edit_text)
-    val button = findViewById<Button>(R.id.button)
-    button.setOnClickListener {
-      textView.text = parser.parse(editText.text.toString()).toString()
-    }
   }
 
   private fun initRules(): List<Rule> =
