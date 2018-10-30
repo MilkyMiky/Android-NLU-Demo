@@ -1,0 +1,16 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gradle/
+.idea/caches/
+.idea/codeStyles/codeStyleConfig.xml
+.idea/dictionaries/
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations.xml
+.idea/workspace.xml
+SampleNLU.iml
+app/app.iml
+buildSrc/.gradle/
+buildSrc/build/
+local.properties
+parser/parser.iml
